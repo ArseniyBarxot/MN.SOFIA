@@ -1,0 +1,792 @@
+
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+
+body{
+    background: #0d0021;
+    margin: 0;
+    padding: 0;
+}
+
+
+.object{
+    position: absolute;
+    width: 600px;
+    height: 700px;
+    border-radius: 30%;
+    background: rgb(255, 0, 204);
+    filter: blur(200px);
+    left: 50%;
+
+}
+.object2{
+    position: absolute;
+    width: 400px;
+    height: 500px;
+    border-radius: 30%;
+    background: rgba(191, 0, 255, 0.722);
+    filter: blur(100px);
+    left: 70%;
+    top: 20%;
+
+}
+.object3{
+    position: absolute;
+    width: 200px;
+    height: 300px;
+    border-radius: 30%;
+    background: rgb(0, 217, 255);
+    filter: blur(100px);
+    left: 70%;
+    top: 30%;
+
+}
+.object4{
+    position: absolute;
+    width: 500px;
+    height: 600px;
+    border-radius: 30%;
+    background: rgb(121, 0, 192);
+    filter: blur(200px);
+    top: 50%;
+}
+.object, .object2, .object3, .object4 {
+    z-index: -1;
+}
+
+.bunner{
+    position: fixed;
+    top: 0;
+    z-index: 50;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 6vw;
+    background: rgba(13, 5, 24, 0.85);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.bunner h1{
+    font-family: "Inter", sans-serif;
+    font-size: 24px;
+    font-weight: 900;
+    color: white;
+}
+
+.bunner span{
+    font-family: "Inter", sans-serif;
+    font-size: 24px;
+    font-weight: 900;
+    color: rgb(238, 0, 255);
+}
+
+
+.tc{
+    display: flex;
+    flex-direction: column;
+    margin-top: 130px;
+    margin-left: 100px;
+    padding: 0;
+}
+
+.tc p.subtitle{
+    color: #c8ff3d;
+    font-family: 'Unbounded';
+    font-size: 13px;
+    font-weight: 600;
+    
+}
+
+.tc h1{
+    color: white;
+    font-family: 'Unbounded';
+    font-weight: 900;
+    margin: 0 0 10px 0;
+    font-size: clamp(38px, 6.2vw, 76px);
+    font-weight: 900;
+    text-transform: uppercase;
+    line-height: 1.1;
+}
+
+.tc p{
+    color: #b9a9d6;
+    
+    max-width: 520px;
+    font-size: 18px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+}
+
+.cta {
+    display: inline-block;
+    
+    padding: 18px 34px;
+    background: linear-gradient(90deg, #7b2ff7, #ff3fae);
+    border-radius: 100px;
+    font-family: 'Unbounded';
+    font-weight: 600;
+    font-size: 15px;
+    align-self: flex-start;
+    color: white;
+    letter-spacing: 0.02em;
+    box-shadow: 0 12px 40px -10px rgba(255, 63, 174, 0.6);
+    transition: transform .25s ease, box-shadow .25s ease;
+}
+
+.cta:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 20px 40px -10px rgba(255, 63, 174, 0.8);
+}
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.wall1{
+    width: 100%;
+    min-height: 100vh;
+    background: #0d0518;
+    margin-top: 50px;
+    font-family: "Inter", sans-serif;
+}
+.tc2{
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+    margin-left: 100px;
+}
+
+.tc2 h1{
+    font-size: clamp(30px, 4.2vw, 46px);
+    font-weight: 600;
+    text-transform: uppercase;
+    max-width: 640px;
+    margin-top: 70px;
+    margin-bottom: 48px;
+    color: white;
+}
+
+.cardc{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-left: 100px;
+}
+
+.card {
+    background: #7b2ff7;
+    color: #f6f1fb;
+    display: grid;
+    grid-template-columns: 64px 1fr;
+    align-items: center;
+    padding: 28px 30px;
+    border-radius: 18px;
+    width: 90%;
+
+}
+
+
+
+.card-num,
+.card-title {
+    line-height: 1;
+    margin: 0;
+}
+
+
+
+
+.card-num {
+    grid-column: 1;
+    grid-row: 1 / 3;
+
+    align-self: center;
+
+    font-family: 'Unbounded';
+    font-weight: 900;
+    font-size: 28px;
+    opacity: 0.55;
+    color: white;
+    margin: 0;
+}
+.card-title {
+    font-family: 'Unbounded';
+    font-weight: 800;
+    font-size: 20px;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+    color: white;
+}
+.card p {
+    grid-column: 2;
+    font-size: 14.5px;
+    color: rgba(246, 241, 251, 0.85);
+    margin: 6px 0 0 0;
+}
+
+.card2 {
+    background: #ff3fae;
+    color: #f6f1fb;
+    display: grid;
+    grid-template-columns: 64px 1fr;
+    align-items: center;
+    padding: 28px 30px;
+    border-radius: 18px;
+    width: 90%;
+    box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+.card2-num,
+.card2-title {
+    line-height: 1;
+    margin: 0;
+}
+
+
+
+
+.card2-num {
+    grid-column: 1;
+    grid-row: 1 / 3;
+
+    align-self: center;
+
+    font-family: 'Unbounded';
+    font-weight: 900;
+    font-size: 28px;
+    opacity: 0.55;
+    color: white;
+    margin: 0;
+}
+.card2-title {
+    font-family: 'Unbounded';
+    font-weight: 800;
+    font-size: 20px;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+    color: white;
+}
+.card2 p {
+    grid-column: 2;
+    font-size: 14.5px;
+    color: rgba(246, 241, 251, 0.85);
+    margin: 6px 0 0 0;
+}
+
+.card3 {
+    background: #c8ff3d;
+    color: #0d0518;
+    display: grid;
+    grid-template-columns: 64px 1fr;
+    align-items: center;
+    padding: 28px 30px;
+    border-radius: 18px;
+    width: 90%;
+    box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+.card3-num,
+.card3-title {
+    line-height: 1;
+    margin: 0;
+}
+
+
+
+
+.card3-num {
+    grid-column: 1;
+    grid-row: 1 / 3;
+
+    align-self: center;
+
+    font-family: 'Unbounded';
+    font-weight: 900;
+    font-size: 28px;
+    opacity: 0.55;
+    color: #0d0518;
+    margin: 0;
+}
+.card3-title {
+    font-family: 'Unbounded';
+    font-weight: 800;
+    font-size: 20px;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+    color: #0d0518;
+}
+.card3 p {
+    grid-column: 2;
+    font-size: 14.5px;
+    color: rgba(13, 5, 24, 0.75);
+    margin: 6px 0 0 0;
+}
+
+
+.card4 {
+    background: #20e6c6;
+    color: #0d0518;
+    display: grid;
+    grid-template-columns: 64px 1fr;
+    align-items: center;
+    padding: 28px 30px;
+    border-radius: 18px;
+    width: 90%;
+}
+
+.card4-num,
+.card4-title {
+    line-height: 1;
+    margin: 0;
+}
+
+
+
+
+.card4-num {
+    grid-column: 1;
+    grid-row: 1 / 3;
+
+    align-self: center;
+
+    font-family: 'Unbounded';
+    font-weight: 900;
+    font-size: 28px;
+    opacity: 0.55;
+    color: #0d0518;
+    margin: 0;
+}
+.card4-title {
+    font-family: 'Unbounded';
+    font-weight: 800;
+    font-size: 20px;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+    color: #0d0518;
+}
+.card4 p {
+    grid-column: 2;
+    font-size: 14.5px;
+    color: rgba(13, 5, 24, 0.75);
+    margin: 6px 0 0 0;
+}
+
+.card5 {
+    background: #4f7bff;
+    color: #0d0518;
+    display: grid;
+    grid-template-columns: 64px 1fr;
+    align-items: center;
+    padding: 28px 30px;
+    border-radius: 18px;
+    width: 90%;
+}
+
+.card5-num,
+.card5-title {
+    line-height: 1;
+    margin: 0;
+}
+
+
+
+
+.card5-num {
+    grid-column: 1;
+    grid-row: 1 / 3;
+
+    align-self: center;
+
+    font-family: 'Unbounded';
+    font-weight: 900;
+    font-size: 28px;
+    opacity: 0.55;
+    color: white;
+    margin: 0;
+}
+.card5-title {
+    font-family: 'Unbounded';
+    font-weight: 800;
+    font-size: 20px;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+    color: white;
+}
+.card5 p {
+    grid-column: 2;
+    font-size: 14.5px;
+    color: rgba(246, 241, 251, 0.85);
+    margin: 6px 0 0 0;
+}
+
+
+.wall2{
+    padding: 10vh 100px; /* Задаем одинаковый отступ в 100px для левого и правого края всего блока */
+    width: 100%;
+    min-height: 100vh;
+    background: #150a24;
+    font-family: "Inter", sans-serif;
+    box-sizing: border-box; /* Важно, чтобы padding не расширял блок за пределы экрана */
+}
+
+
+.tcc{
+    display: flex;
+    flex-direction: column;
+    
+}
+.tcc h1{
+    font-size: clamp(30px, 4.2vw, 46px);
+    font-weight: 600;
+    text-transform: uppercase;
+    max-width: 640px;
+    margin-bottom: 48px;
+    
+    color: white;
+}
+
+
+.cardc2{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    
+
+}
+.cardp{ 
+    background: linear-gradient(160deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0));
+    border: 1px solid rgba(255, 255, 255, 0.1); 
+    border-radius: 20px; 
+    padding: 34px; 
+    display: flex; 
+    flex-direction: column; 
+    transition: all 0.3s;
+}
+.cardp:hover{
+    border: 1px solid #ff3faf77;
+    box-shadow: 0 0 20px #ff3faf49;
+}
+.cardp h3 {
+    font-size: 24px;
+    font-weight: 800;
+    text-transform: uppercase;
+    margin: 0 0 6px 0;
+    color: white;
+}
+
+.cardp p {
+    font-family: 'Unbounded';
+    font-weight: 900;
+    font-size: 15px;
+    color: #c8ff3d;
+    margin-bottom: 14px;
+}
+.cardp p.prog {
+    font-family: "Inter", sans-serif;
+    font-weight: 500;
+    font-size: 15px;
+    color: #b9a9d6;
+
+    margin-top: 0;
+    margin-bottom: 18px;
+}
+h1, h2, h3, .display {
+    font-family: 'Unbounded', sans-serif;
+    line-height: 1.05;
+    letter-spacing: -0.01em;
+}
+.cardp li {
+    font-size: 14.5px;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    color: #e6dcf7;
+    list-style: none;
+    position: relative;
+    padding: 9px 0 9px 22px;
+}
+
+.cardp li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 16px;
+    height: 1.5px;
+    background-color: #ff3fae; 
+}
+
+.cardp p.result{
+    font-size: 13.5px;
+    color: #b9a9d6;
+    font-style: normal;
+    font-family: "Inter", sans-serif;
+    font-weight: 500;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 14px;
+}
+.cardp span.ff{
+    font-family: "Inter", sans-serif;
+    font-weight: 500;
+    font-size: 15px;
+    color: white;
+
+}
+
+
+
+
+
+
+.wall3{
+    
+    padding: 10vh 6vw;
+    text-align: center;
+    background: linear-gradient(180deg, #0d0518, #1a0c2e);
+    width: 100%;
+    min-height: 100px;
+    font-family: "Inter", sans-serif;
+}
+.wob{
+    position: absolute;
+    width: 1000px;
+    height: 300px;
+    border-radius: 30%;
+    background: #0d0518;
+    filter: blur(200px);
+    z-index: -1;
+    margin-top: 100px;
+    margin-left: 300px;
+    
+}
+
+.wlot{
+    font-size: clamp(26px, 4vw, 40px);
+    font-weight: 800;
+    max-width: 760px;
+    margin: 0 auto 22px;
+    text-transform: uppercase;
+}
+.wlot h1{
+    font-family: 'Unbounded';
+    font-weight: 900;
+    font-size: clamp(26px, 4vw, 40px);
+    color: white;
+}
+.wlot p.herp{
+    max-width: 640px;
+    margin: 0 auto 14px;
+    color: #b9a9d6;
+    font-size: 16.5px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    text-transform: none;
+}
+
+.wlot span.gol{
+    color: white;
+    font-weight: 600;
+}
+
+
+.wall4 {
+    padding: 10vh 6vw 20px 6vw;
+    text-align: center;
+    background: radial-gradient(circle at 50% 0%, rgba(255, 63, 174, 0.35), transparent 55%), #0d0518;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    width: 100%;
+    min-height: 500px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.tcw{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.tcw h1{
+    font-size: clamp(30px, 5vw, 54px);
+    font-weight: 900;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    color: white;
+}
+.tcw p.final{
+    max-width: 560px;
+    margin: 0 auto 12px;
+    color: #b9a9d6;
+    font-size: 16.5px;
+    font-family: 'Inter', sans-serif;
+}
+
+.tcw button.btn {
+    display: inline-block;
+    width: max-content;
+    margin-top: 30px;
+    font-size: 15px;
+    padding: 18px 34px;
+    background: linear-gradient(90deg, #7b2ff7, #ff3fae);
+    border-radius: 100px;
+    font-family: 'Unbounded';
+    border: none;
+    font-weight: 600;
+    color: white;
+    letter-spacing: 0.02em;
+    box-shadow: 0 12px 40px -10px rgba(255, 63, 174, 0.6);
+    transition: transform .25s ease, box-shadow .25s ease;
+    cursor: pointer;
+}
+
+.tcw button.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 20px 40px -10px rgba(255, 63, 174, 0.8);
+}
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.wall4 footer {
+    padding: 20px 0 0 0;
+    text-align: center;
+    color: #b9a9d6;
+    font-size: 13px;
+    font-family: 'Inter', sans-serif;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    width: 100%;
+    margin-top: auto;
+}
+
+
+
+
+
+
+@keyframes riseIn{
+  from{opacity:0;transform:translateY(18px);}
+  to{opacity:1;transform:translateY(0);}
+}
+@keyframes heroIn{
+  from{opacity:0;transform:translateY(24px) scale(0.99);}
+  to{opacity:1;transform:translateY(0) scale(1);}
+}
+
+.eyebrow-free,.hero h1,.hero p,.hero .cta{
+  opacity:0;
+  animation:heroIn 1s cubic-bezier(.16,1,.3,1) forwards;
+}
+.eyebrow-free{animation-delay:0.05s;}
+.hero h1{animation-delay:0.15s;}
+.hero p{animation-delay:0.3s;}
+.hero p + p{animation-delay:0.4s;}
+.hero .cta{animation-delay:0.55s;}
+
+.reveal{
+  opacity:0;
+  transform:translateY(18px);
+}
+.reveal.in-view{
+  animation:riseIn 0.9s cubic-bezier(.16,1,.3,1) forwards;
+}
+
+@media (prefers-reduced-motion: reduce){
+  .eyebrow-free,.hero h1,.hero p,.hero .cta,.reveal{
+    animation:none !important;
+    opacity:1 !important;
+    transform:none !important;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 1024px){
+
+}
+
+@media (max-width: 768px){
+    html, body {
+        width: 100% !important;
+        overflow-x: hidden !important;
+    }
+
+    /* 2. Полностью убираем фоновые светящиеся пятна на мобилках, 
+       так как они создают горизонтальный скролл */
+    .object, .object2, .object3, .object4, .wob {
+        display: none !important;
+    }
+
+
+    .bunner{
+        width: 100%;
+    }
+    .tc{
+        margin-left: 10px;
+    }
+    .tc2{
+        margin-left: 0 !important;
+        align-items: center;
+    }
+    .tc2 h1{
+        text-align: center;
+        margin-left: 0 !important;
+    }
+    .cardc{
+        align-items: center;
+        margin-left: 0 !important;
+    }
+    .tcc{
+        margin-left: 0 !important;
+        align-items: center;
+        
+    }
+    .tcc h1{
+        text-align: center;
+    }
+    .wall2 {
+        padding: 5vh 15px !important;
+        width: 100% !important;
+        box-sizing: border-box;
+    }
+
+
+    .tcc {
+        width: 100% !important;
+        margin: 0 !important;
+    }
+
+    .cardc2 {
+        grid-template-columns: 1fr !important;
+        width: 100% !important;
+        gap: 16px;
+    }
+
+    .cardp {
+        width: 100% !important;
+        margin: 0 !important;
+        box-sizing: border-box;
+        padding: 24px;
+    }
+
+}
